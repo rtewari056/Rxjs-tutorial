@@ -1,0 +1,23 @@
+$text-color: #d81b60;
+$border-color: #c2185b;
+$card-bg: #fdf2f6;
+$card-hover-bg: #fce5ee;
+
+.card {
+    min-height: 100px;
+    border-color: $border-color;
+    color: $text-color;
+    background-color: $card-bg;
+
+
+    .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.card:hover {
+    background-color: $card-hover-bg;
+    cursor: pointer;
+}
