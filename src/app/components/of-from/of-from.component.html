@@ -1,0 +1,74 @@
+<div class="my-3 mx-2">
+    <h5>Of and From</h5>
+    <br>
+
+    <strong>Example - 01 (OF)</strong>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>of('Rohit', 'Aman', 'Chaman')
+            </p>
+            <hr>
+            <ul id="ofContainer">
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>of(&#123; name1: 'Rohit', name2: 'Aman', name3: 'Chaman' &#125;)
+            </p>
+            <hr>
+            <ul>
+                <li><strong>name1: </strong>{{obs2Msg.name1}}</li>
+                <li><strong>name2: </strong>{{obs2Msg.name2}}</li>
+                <li><strong>name3: </strong>{{obs2Msg.name3}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <strong>Example - 02 (FROM)</strong>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Array</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>from(['Angular', 'React', 'Vue'])
+            </p>
+            <hr>
+            <ul id="fromContainer">
+                
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <strong>Promise</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>Promise to Observable
+            </p>
+            <hr>
+            <ul id="fromPromiseContainer">
+
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <strong>String</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>String to Observable
+            </p>
+            <hr>
+            <ul id="fromStringContainer">
+
+            </ul>
+        </div>
+    </div>
+</div>

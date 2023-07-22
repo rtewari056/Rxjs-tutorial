@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { fromEvent } from 'rxjs';
+import { DesignUtilityService } from 'src/app/services/design-utility.service';
 
 @Component({
   selector: 'app-from-event',
@@ -10,6 +11,8 @@ import { fromEvent } from 'rxjs';
   styleUrls: ['./from-event.component.scss']
 })
 export class FromEventComponent implements OnInit, AfterViewInit {
+  private _designUtilityService = inject(DesignUtilityService);
+
   @ViewChild('addVideoBtn') addVideoBtn!: ElementRef;
 
   ngOnInit(): void {
@@ -22,15 +25,10 @@ export class FromEventComponent implements OnInit, AfterViewInit {
       const coutVal = `Video ${count}`;
       console.log(coutVal);
       
-      this.printListItem(coutVal);
+      // Print values on page
+      this._designUtilityService.print(coutVal, 'elemContainer');
       count++;
     });
-  }
-
-  printListItem(val: string): void {
-    let elem: HTMLLIElement = document.createElement('li');
-    elem.innerText = val;
-    document.getElementById('elemContainer')?.appendChild(elem);
   }
 
 }

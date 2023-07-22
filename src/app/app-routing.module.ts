@@ -24,6 +24,10 @@ export const routes: Routes = [
       {
         path: 'timer',
         loadComponent: () => import('./components/timer/timer.component').then(m => m.TimerComponent)
+      },
+      {
+        path: 'of-from',
+        loadComponent: () => import('./components/of-from/of-from.component').then(m => m.OfFromComponent)
       }
     ]
   },
