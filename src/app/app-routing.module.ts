@@ -28,6 +28,10 @@ export const routes: Routes = [
       {
         path: 'of-from',
         loadComponent: () => import('./components/of-from/of-from.component').then(m => m.OfFromComponent)
+      },
+      {
+        path: 'to-array',
+        loadComponent: () => import('./components/to-array/to-array.component').then(m => m.ToArrayComponent)
       }
     ]
   },

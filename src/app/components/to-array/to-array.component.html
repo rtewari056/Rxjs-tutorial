@@ -1,0 +1,55 @@
+<div class="my-3 mx-2">
+    <h5>toArray</h5>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Number</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong><code>interval(1000).pipe(take(5), toArray())</code>
+            </p>
+            <hr>
+            <ul id="toArrayIntervalContainer">
+
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <strong>Object</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>
+                <code>
+                    from([<br>
+                    &nbsp; &#123; name: 'Rohit', skill: 'Angular' &#125;, <br>
+                    &nbsp; &#123; name: 'Aman', skill: 'Vue' &#125;, <br>
+                    &nbsp; &#123; name: 'Chaman', skill: 'React' &#125;, <br>
+                    &nbsp; &#123; name: 'Parth', skill: 'Ionic' &#125;<br>
+                    ]).pipe(toArray());
+                </code>
+            </p>
+            <hr>
+            <ul id="toArrayFromContainer">
+
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <strong>String</strong>
+            <hr>
+
+            <p class="border rounded bg-light p-2">
+                <strong>Data: </strong>
+                <code>of('Angular', 'React', 'Vue').pipe(toArray())</code>
+            </p>
+            <hr>
+            <ul id="toArrayOfContainer">
+
+            </ul>
+        </div>
+    </div>
+</div>
