@@ -32,6 +32,10 @@ export const routes: Routes = [
       {
         path: 'to-array',
         loadComponent: () => import('./components/to-array/to-array.component').then(m => m.ToArrayComponent)
+      },
+      {
+        path: 'custom-observable',
+        loadComponent: () => import('./components/custom-observable/custom-observable.component').then(m => m.CustomObservableComponent)
       }
     ]
   },

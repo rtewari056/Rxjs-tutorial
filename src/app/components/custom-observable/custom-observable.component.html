@@ -1,0 +1,45 @@
+<div class="my-3 mx-2">
+    <h5>Custom Observable</h5>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <strong>EX - 01 (Manual)</strong>
+            <hr>
+
+            <ul id="custObsManualContainer" class="list-unstyled d-flex flex-column gap-3" [ngClass]="obsStatus === 'completed' ? 'completed' : obsStatus === 'error'? 'error' : ''">
+
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <strong>EX - 02 (Custom Interval Observable)</strong>
+            <hr>
+
+            <ul id="custInterObsContainer" class="list-unstyled d-flex flex-column gap-3">
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-12">
+            <strong>EX - 03 (Random Names)</strong>
+            <hr>
+            <p class="border rounded bg-light p-2">
+                <strong>Random Names: </strong>
+                <code>'Rohit', 'Aman', 'Chaman', 'Sameer', 'John', 'Alex', 'Robert'</code>
+            </p>
+
+            <hr>
+
+            <p>Current Name: <strong class="text-success">Rohit</strong></p>
+            <span class="badge text-bg-success">Success</span>
+        </div>
+    </div>
+</div>
