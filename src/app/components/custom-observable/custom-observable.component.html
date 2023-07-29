@@ -8,7 +8,7 @@
             <strong>EX - 01 (Manual)</strong>
             <hr>
 
-            <ul id="custObsManualContainer" class="list-unstyled d-flex flex-column gap-3" [ngClass]="obsStatus === 'completed' ? 'completed' : obsStatus === 'error'? 'error' : ''">
+            <ul id="custObsManualContainer" class="list-unstyled d-flex flex-column gap-3" [ngClass]="obsStatus1 === 'completed' ? 'completed' : obsStatus1 === 'error'? 'error' : ''">
 
             </ul>
         </div>
@@ -17,10 +17,8 @@
             <strong>EX - 02 (Custom Interval Observable)</strong>
             <hr>
 
-            <ul id="custInterObsContainer" class="list-unstyled d-flex flex-column gap-3">
-                <li>Angular</li>
-                <li>TypeScript</li>
-                <li>HTML & CSS</li>
+            <ul id="custInterObsContainer" class="list-unstyled d-flex flex-column gap-3" [ngClass]="obsStatus2 === 'completed' ? 'completed' : obsStatus2 === 'error'? 'error' : ''">
+
             </ul>
         </div>
     </div>
@@ -38,8 +36,8 @@
 
             <hr>
 
-            <p>Current Name: <strong class="text-success">Rohit</strong></p>
-            <span class="badge text-bg-success">Success</span>
+            <p>Current Name: <strong class="text-success">{{name}}</strong></p>
+            <span class="badge" [ngClass]="nameStatus === 'completed' ? 'text-bg-success' : nameStatus === 'error'? 'text-bg-danger' : 'text-bg-primary'">{{nameStatus === 'completed' ? 'Success' : nameStatus === 'error'? 'Error' : 'Running'}}</span>
         </div>
     </div>
 </div>
