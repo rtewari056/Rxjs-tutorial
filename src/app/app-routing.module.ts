@@ -36,6 +36,10 @@ export const routes: Routes = [
       {
         path: 'custom-observable',
         loadComponent: () => import('./components/custom-observable/custom-observable.component').then(m => m.CustomObservableComponent)
+      },
+      {
+        path: 'map',
+        loadComponent: () => import('./components/map/map.component').then(m => m.MapComponent)
       }
     ]
   },

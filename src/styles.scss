@@ -7,23 +7,29 @@
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
 // Writing styles globally to avoild View Encapsulation
-ul > li {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    background-color: rgba(248, 249, 250);
-    padding: 10px;
+#custObsManualContainer, #custInterObsContainer {
+    li {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        background-color: rgba(248, 249, 250);
+        padding: 10px;
+    }
 }
 
-ul.completed li {
-    border-radius: 5px;
-    background-color: #198754;
-    padding: 10px;
-    color: white;
+#custObsManualContainer.completed, #custInterObsContainer.error {
+    li {
+        border-radius: 5px;
+        background-color: #198754;
+        padding: 10px;
+        color: white;
+    }
 }
 
-ul.error li {
-    border-radius: 5px;
-    background-color: #dc3545;
-    padding: 10px;
-    color: white;
+#custObsManualContainer.error, #custInterObsContainer.error {
+    li {
+        border-radius: 5px;
+        background-color: #dc3545;
+        padding: 10px;
+        color: white;
+    }
 }
