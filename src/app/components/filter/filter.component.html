@@ -1,0 +1,69 @@
+<div class="my-3 mx-2">
+    <h5>Filter</h5>
+
+    <br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Ex - 01</strong>
+            <hr>
+            <p class="border rounded bg-light p-2">
+                <strong>Filter:</strong> by name length
+            </p>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </tr>
+                <tr *ngFor="let user of usersData1">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 02</strong>
+            <hr>
+            <p class="border rounded bg-light p-2">
+                <strong>Filter:</strong> by gender
+            </p>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </tr>
+                <tr *ngFor="let user of usersData2">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong>Ex - 03</strong>
+            <hr>
+            <p class="border rounded bg-light p-2">
+                <strong>Filter:</strong> by nth item
+            </p>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </tr>
+                <tr *ngFor="let user of usersData3">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.gender}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>

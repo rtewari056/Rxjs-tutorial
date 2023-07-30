@@ -40,6 +40,10 @@ export const routes: Routes = [
       {
         path: 'map',
         loadComponent: () => import('./components/map/map.component').then(m => m.MapComponent)
+      },
+      {
+        path: 'filter',
+        loadComponent: () => import('./components/filter/filter.component').then(m => m.FilterComponent)
       }
     ]
   },
