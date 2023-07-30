@@ -40,14 +40,17 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
       }, 5000);
     });
     
-    // subscribe(data, error, completion)
-    cusObs1$.subscribe((res: string) => {
-      this._designUtilityService.print(res, 'custObsManualContainer');
-    },(error: Error) => {
-      this.obsStatus1 = 'error';
-    }, () => {
-      this.obsStatus1 = 'completed';
-    });
+    cusObs1$.pipe(takeUntil(this.unsubscribe$)).subscribe({
+      next: (res: string) => {
+        this._designUtilityService.print(res, 'custObsManualContainer');
+      },
+      error: (err: Error) => {
+        this.obsStatus1 = 'error';
+      },
+      complete: () => {
+        this.obsStatus1 = 'completed';
+      },
+    })
     
     // EX - 02 (Custom Interval Observable)
     const arr2: string[] = ['Angular', 'JavaScript', 'HTML', 'CSS', 'TypeScript'];
@@ -66,14 +69,17 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
       }, 1000);
     })
     
-    cusObs2$.pipe(takeUntil(this.unsubscribe$)).subscribe((res: string) => {
-      this._designUtilityService.print(res, 'custInterObsContainer');
-      // console.log(res);
-    },(error: Error) => {
-      this.obsStatus2 = 'error';
-    }, () => {
-      this.obsStatus2 = 'completed';
-    });
+    cusObs2$.pipe(takeUntil(this.unsubscribe$)).subscribe({
+      next: (res: string) => {
+        this._designUtilityService.print(res, 'custInterObsContainer');
+      },
+      error: (err: Error) => {
+        this.obsStatus2 = 'error';
+      },
+      complete: () => {
+        this.obsStatus2 = 'completed';
+      },
+    })
 
     // EX - 03 (Random Names)
     const arr3: string[] = ['Rohit', 'Aman', 'Chaman', 'Sameer', 'John', 'Alex', 'Robert'];
@@ -93,14 +99,17 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
 
     });
 
-    cusObs3$.pipe(takeUntil(this.unsubscribe$)).subscribe((res: string) => {
-      this.name = res;
-      // console.log(res);
-    },(error: Error) => {
-      this.nameStatus = 'error';
-    }, () => {
-      this.nameStatus = 'completed';
-    });
+    cusObs3$.pipe(takeUntil(this.unsubscribe$)).subscribe({
+      next: (res: string) => {
+        this.name = res;
+      },
+      error: (err: Error) => {
+        this.nameStatus = 'error';
+      },
+      complete: () => {
+        this.nameStatus = 'completed';
+      },
+    })
   }
 
   ngOnDestroy(): void {
