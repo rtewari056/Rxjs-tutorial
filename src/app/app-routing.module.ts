@@ -44,6 +44,10 @@ export const routes: Routes = [
       {
         path: 'filter',
         loadComponent: () => import('./components/filter/filter.component').then(m => m.FilterComponent)
+      },
+      {
+        path: 'tap',
+        loadComponent: () => import('./components/tap/tap.component').then(m => m.TapComponent)
       }
     ]
   },
